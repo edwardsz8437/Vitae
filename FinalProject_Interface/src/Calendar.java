@@ -41,7 +41,9 @@ public class Calendar extends JFrame {
 	 * Create the frame.
 	 */
 	public Calendar() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		String[] months = new String [12];
 		setBounds(100, 100, 476, 299);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -52,43 +54,55 @@ public class Calendar extends JFrame {
 		
 		JMenuItem mntmJanuary = new JMenuItem("January");
 		mnMonth.add(mntmJanuary);
+		months[0] = "January";
 		
 		JMenuItem mntmFebruary = new JMenuItem("February");
 		mnMonth.add(mntmFebruary);
+		months[1] = "February";
 		
 		JMenuItem mntmMarch = new JMenuItem("March");
 		mnMonth.add(mntmMarch);
+		months[2] = "March";
 		
 		JMenuItem mntmApril = new JMenuItem("April");
 		mnMonth.add(mntmApril);
+		months[3] = "April";
 		
 		JMenuItem mntmMay = new JMenuItem("May");
 		mnMonth.add(mntmMay);
+		months[4] = "May";
 		
 		JMenuItem mntmJune = new JMenuItem("June");
 		mnMonth.add(mntmJune);
+		months[5] = "June";
 		
 		JMenuItem mntmJuly = new JMenuItem("July");
 		mnMonth.add(mntmJuly);
+		months[6] = "July";
 		
 		JMenuItem mntmAugust = new JMenuItem("August");
 		mnMonth.add(mntmAugust);
+		months[7] = "August";
 		
 		JMenuItem mntmSeptember = new JMenuItem("September");
 		mnMonth.add(mntmSeptember);
+		months[8] = "September";
 		
 		JMenuItem mntmOctober = new JMenuItem("October");
 		mnMonth.add(mntmOctober);
+		months[9] = "October";
 		
 		JMenuItem mntmNovember = new JMenuItem("November");
 		mnMonth.add(mntmNovember);
+		months[10] = "November";
 		
 		JMenuItem mntmDecember = new JMenuItem("December");
 		mnMonth.add(mntmDecember);
+		months[11] = "December";
 		
 		txtMonthyear = new JTextField();
 		txtMonthyear.setHorizontalAlignment(SwingConstants.CENTER);
-		txtMonthyear.setText("MONTH_YEAR");
+		txtMonthyear.setText(months[2]);
 		menuBar.add(txtMonthyear);
 		txtMonthyear.setColumns(10);
 		
