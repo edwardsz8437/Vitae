@@ -44,6 +44,7 @@ public class Calendar extends JFrame {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		String[] months = new String [12];
+		int x;
 		setBounds(100, 100, 476, 299);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -54,56 +55,140 @@ public class Calendar extends JFrame {
 		
 		JMenuItem mntmJanuary = new JMenuItem("January");
 		mnMonth.add(mntmJanuary);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 0;
+			}
+		});
 		months[0] = "January";
 		
 		JMenuItem mntmFebruary = new JMenuItem("February");
 		mnMonth.add(mntmFebruary);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 1;
+			}
+		});
 		months[1] = "February";
 		
 		JMenuItem mntmMarch = new JMenuItem("March");
 		mnMonth.add(mntmMarch);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 2;
+			}
+		});
 		months[2] = "March";
 		
 		JMenuItem mntmApril = new JMenuItem("April");
 		mnMonth.add(mntmApril);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 3;
+			}
+		});
 		months[3] = "April";
 		
 		JMenuItem mntmMay = new JMenuItem("May");
 		mnMonth.add(mntmMay);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 4;
+			}
+		});
 		months[4] = "May";
 		
 		JMenuItem mntmJune = new JMenuItem("June");
 		mnMonth.add(mntmJune);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 5;
+			}
+		});
 		months[5] = "June";
 		
 		JMenuItem mntmJuly = new JMenuItem("July");
 		mnMonth.add(mntmJuly);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 6;
+			}
+		});
 		months[6] = "July";
 		
 		JMenuItem mntmAugust = new JMenuItem("August");
 		mnMonth.add(mntmAugust);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 7;
+			}
+		});
 		months[7] = "August";
 		
 		JMenuItem mntmSeptember = new JMenuItem("September");
 		mnMonth.add(mntmSeptember);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 8;
+			}
+		});
 		months[8] = "September";
 		
 		JMenuItem mntmOctober = new JMenuItem("October");
 		mnMonth.add(mntmOctober);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 9;
+			}
+		});
 		months[9] = "October";
 		
 		JMenuItem mntmNovember = new JMenuItem("November");
 		mnMonth.add(mntmNovember);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 10;
+			}
+		});
 		months[10] = "November";
 		
 		JMenuItem mntmDecember = new JMenuItem("December");
 		mnMonth.add(mntmDecember);
+		mntmJanuary.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				 x = 11;
+			}
+		});
 		months[11] = "December";
 		
 		txtMonthyear = new JTextField();
 		txtMonthyear.setEditable(false);
 		txtMonthyear.setHorizontalAlignment(SwingConstants.CENTER);
-		txtMonthyear.setText(months[2]);
+		txtMonthyear.setText(months[x]);
 		menuBar.add(txtMonthyear);
 		txtMonthyear.setColumns(10);
 		
@@ -139,7 +224,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				 int x = 0;
 			}
 		});
 		GridBagConstraints gbc_btnst = new GridBagConstraints();
