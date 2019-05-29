@@ -101,6 +101,7 @@ public class Calendar extends JFrame {
 		months[11] = "December";
 		
 		txtMonthyear = new JTextField();
+		txtMonthyear.setEditable(false);
 		txtMonthyear.setHorizontalAlignment(SwingConstants.CENTER);
 		txtMonthyear.setText(months[2]);
 		menuBar.add(txtMonthyear);
@@ -134,8 +135,11 @@ public class Calendar extends JFrame {
 		contentPane.setLayout(gbl_contentPane);
 		
 		JButton btnst = new JButton(" 1st ");
-		btnst.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnst.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				
 			}
 		});
 		GridBagConstraints gbc_btnst = new GridBagConstraints();
