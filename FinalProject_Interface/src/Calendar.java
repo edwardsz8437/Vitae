@@ -36,6 +36,23 @@ public class Calendar extends JFrame {
 			}
 		});
 	}
+	
+	public void setIndex(int x, String[] arr, String month)
+	{
+		x = 0;
+		arr = new String[12];
+		int i = 0;
+		
+		if(arr[i].equals(month))
+		{
+			x = i;
+		}
+		else
+		{
+			i++;
+		}
+	}
+	
 
 	/**
 	 * Create the frame.
@@ -43,8 +60,8 @@ public class Calendar extends JFrame {
 	public Calendar() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		int x = 0;
 		String[] months = new String [12];
-		int x;
 		setBounds(100, 100, 476, 299);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -59,7 +76,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 0;
+				setIndex(x, months, "January");
 			}
 		});
 		months[0] = "January";
@@ -70,7 +87,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 1;
+				setIndex(x, months, "February");
 			}
 		});
 		months[1] = "February";
@@ -81,7 +98,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 2;
+				setIndex(x, months, "March");
 			}
 		});
 		months[2] = "March";
@@ -92,7 +109,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 3;
+				setIndex(x, months, "April");
 			}
 		});
 		months[3] = "April";
@@ -103,7 +120,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 4;
+				setIndex(x, months, "May");
 			}
 		});
 		months[4] = "May";
@@ -114,7 +131,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 5;
+				setIndex(x, months, "June");
 			}
 		});
 		months[5] = "June";
@@ -125,7 +142,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 6;
+				setIndex(x, months, "July");
 			}
 		});
 		months[6] = "July";
@@ -136,7 +153,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 7;
+				setIndex(x, months, "August");
 			}
 		});
 		months[7] = "August";
@@ -147,7 +164,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 8;
+				setIndex(x, months, "September");
 			}
 		});
 		months[8] = "September";
@@ -158,7 +175,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 9;
+				setIndex(x, months, "October");
 			}
 		});
 		months[9] = "October";
@@ -169,7 +186,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 10;
+				setIndex(x, months, "November");
 			}
 		});
 		months[10] = "November";
@@ -180,7 +197,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				 x = 11;
+				setIndex(x, months, "December");
 			}
 		});
 		months[11] = "December";
