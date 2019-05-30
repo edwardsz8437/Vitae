@@ -50,9 +50,13 @@ public class Calendar extends JFrame {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		String x = "oopsy woopsy this don't work";
 		String[] months = new String [12];
 		setBounds(100, 100, 476, 299);
+=======
+		setBounds(100, 100, 452, 356);
+>>>>>>> parent of 37fb776... Calnedar UI Update
 =======
 		setBounds(100, 100, 452, 356);
 >>>>>>> parent of 37fb776... Calnedar UI Update
@@ -66,6 +70,7 @@ public class Calendar extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,6 +225,8 @@ public class Calendar extends JFrame {
 >>>>>>> parent of 37fb776... Calnedar UI Update
 =======
 >>>>>>> parent of 37fb776... Calnedar UI Update
+=======
+>>>>>>> parent of 37fb776... Calnedar UI Update
 		JButton btnMonth = new JButton("Month");
 		btnMonth.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -228,6 +235,9 @@ public class Calendar extends JFrame {
 		menuBar.add(btnMonth);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 37fb776... Calnedar UI Update
+=======
 >>>>>>> parent of 37fb776... Calnedar UI Update
 =======
 >>>>>>> parent of 37fb776... Calnedar UI Update
@@ -257,6 +267,7 @@ public class Calendar extends JFrame {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		JButton btnst = new JButton(" 1st ");
 		btnst.addActionListener(new ActionListener()
 		{
@@ -264,6 +275,8 @@ public class Calendar extends JFrame {
 			{
 				 int x = 0;
 =======
+=======
+>>>>>>> parent of 37fb776... Calnedar UI Update
 =======
 >>>>>>> parent of 37fb776... Calnedar UI Update
 =======
