@@ -37,20 +37,9 @@ public class Calendar extends JFrame {
 		});
 	}
 	
-	public void setIndex(int x, String[] arr, String month)
+	public void setIndex(String x, String month)
 	{
-		x = 0;
-		arr = new String[12];
-		int i = 0;
-		
-		if(arr[i].equals(month))
-		{
-			x = i;
-		}
-		else
-		{
-			i++;
-		}
+		x = month;
 	}
 	
 
@@ -60,7 +49,7 @@ public class Calendar extends JFrame {
 	public Calendar() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		int x = 0;
+		String x = "oopsy woopsy this don't work";
 		String[] months = new String [12];
 		setBounds(100, 100, 476, 299);
 		
@@ -72,140 +61,152 @@ public class Calendar extends JFrame {
 		
 		JMenuItem mntmJanuary = new JMenuItem("January");
 		mnMonth.add(mntmJanuary);
+		months[0] = "January";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "January");
+				setIndex(x, "January");
 			}
 		});
-		months[0] = "January";
+
 		
 		JMenuItem mntmFebruary = new JMenuItem("February");
 		mnMonth.add(mntmFebruary);
+		months[1] = "February";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "February");
+				setIndex(x, "February");
 			}
 		});
-		months[1] = "February";
+
 		
 		JMenuItem mntmMarch = new JMenuItem("March");
 		mnMonth.add(mntmMarch);
+		months[2] = "March";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "March");
+				setIndex(x, "March");
 			}
 		});
-		months[2] = "March";
+
 		
 		JMenuItem mntmApril = new JMenuItem("April");
 		mnMonth.add(mntmApril);
+		months[3] = "April";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "April");
+				setIndex(x, "April");
 			}
 		});
-		months[3] = "April";
+
 		
 		JMenuItem mntmMay = new JMenuItem("May");
 		mnMonth.add(mntmMay);
+		months[4] = "May";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "May");
+				setIndex(x, "May");
 			}
 		});
-		months[4] = "May";
+
 		
 		JMenuItem mntmJune = new JMenuItem("June");
 		mnMonth.add(mntmJune);
+		months[5] = "June";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "June");
+				setIndex(x, "June");
 			}
 		});
-		months[5] = "June";
+
 		
 		JMenuItem mntmJuly = new JMenuItem("July");
 		mnMonth.add(mntmJuly);
+		months[6] = "July";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "July");
+				setIndex(x, "July");
 			}
 		});
-		months[6] = "July";
+
 		
 		JMenuItem mntmAugust = new JMenuItem("August");
 		mnMonth.add(mntmAugust);
+		months[7] = "August";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "August");
+				setIndex(x, "August");
 			}
 		});
-		months[7] = "August";
+
 		
 		JMenuItem mntmSeptember = new JMenuItem("September");
 		mnMonth.add(mntmSeptember);
+		months[8] = "September";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "September");
+				setIndex(x, "September");
 			}
 		});
-		months[8] = "September";
+
 		
 		JMenuItem mntmOctober = new JMenuItem("October");
 		mnMonth.add(mntmOctober);
+		months[9] = "October";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "October");
+				setIndex(x, "October");
 			}
 		});
-		months[9] = "October";
+
 		
 		JMenuItem mntmNovember = new JMenuItem("November");
 		mnMonth.add(mntmNovember);
+		months[10] = "November";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "November");
+				setIndex(x, "November");
 			}
 		});
-		months[10] = "November";
+
 		
 		JMenuItem mntmDecember = new JMenuItem("December");
 		mnMonth.add(mntmDecember);
+		months[11] = "December";
 		mntmJanuary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				setIndex(x, months, "December");
+				setIndex(x, "December");
 			}
 		});
-		months[11] = "December";
+
 		
 		txtMonthyear = new JTextField();
 		txtMonthyear.setEditable(false);
 		txtMonthyear.setHorizontalAlignment(SwingConstants.CENTER);
-		txtMonthyear.setText(months[x]);
+		txtMonthyear.setText(x);
 		menuBar.add(txtMonthyear);
 		txtMonthyear.setColumns(10);
 		
