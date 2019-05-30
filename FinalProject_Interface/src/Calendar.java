@@ -13,8 +13,6 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
 
 public class Calendar extends JFrame {
 
@@ -44,18 +42,23 @@ public class Calendar extends JFrame {
 	
 
 	/**
-	 * Create the frame.
+	 * Create the fram.
 	 */
 	public Calendar() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+<<<<<<< HEAD
 		String x = "oopsy woopsy this don't work";
 		String[] months = new String [12];
 		setBounds(100, 100, 476, 299);
+=======
+		setBounds(100, 100, 452, 356);
+>>>>>>> parent of 37fb776... Calnedar UI Update
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
+<<<<<<< HEAD
 		JMenu mnMonth = new JMenu("Month");
 		menuBar.add(mnMonth);
 		
@@ -202,6 +205,14 @@ public class Calendar extends JFrame {
 			}
 		});
 
+=======
+		JButton btnMonth = new JButton("Month");
+		btnMonth.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		menuBar.add(btnMonth);
+>>>>>>> parent of 37fb776... Calnedar UI Update
 		
 		txtMonthyear = new JTextField();
 		txtMonthyear.setEditable(false);
@@ -210,23 +221,9 @@ public class Calendar extends JFrame {
 		menuBar.add(txtMonthyear);
 		txtMonthyear.setColumns(10);
 		
-		JMenu mnYear = new JMenu("Year");
-		menuBar.add(mnYear);
-		
-		JMenuItem menuItem = new JMenuItem("2018");
-		mnYear.add(menuItem);
-		
-		JMenuItem menuItem_1 = new JMenuItem("2019");
-		mnYear.add(menuItem_1);
-		
-		JMenuItem menuItem_2 = new JMenuItem("2020");
-		mnYear.add(menuItem_2);
-		
-		JMenuItem menuItem_3 = new JMenuItem("2021");
-		mnYear.add(menuItem_3);
-		
-		JMenuItem menuItem_4 = new JMenuItem("2022");
-		mnYear.add(menuItem_4);
+		JButton btnYear = new JButton("Year");
+		btnYear.setHorizontalAlignment(SwingConstants.TRAILING);
+		menuBar.add(btnYear);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -237,12 +234,18 @@ public class Calendar extends JFrame {
 		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
+<<<<<<< HEAD
 		JButton btnst = new JButton(" 1st ");
 		btnst.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				 int x = 0;
+=======
+		JButton btnst = new JButton("1st");
+		btnst.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+>>>>>>> parent of 37fb776... Calnedar UI Update
 			}
 		});
 		GridBagConstraints gbc_btnst = new GridBagConstraints();
@@ -258,14 +261,14 @@ public class Calendar extends JFrame {
 		gbc_btnnd.gridy = 0;
 		contentPane.add(btnnd, gbc_btnnd);
 		
-		JButton btnrd = new JButton(" 3rd ");
+		JButton btnrd = new JButton("3rd");
 		GridBagConstraints gbc_btnrd = new GridBagConstraints();
 		gbc_btnrd.insets = new Insets(0, 0, 5, 5);
 		gbc_btnrd.gridx = 2;
 		gbc_btnrd.gridy = 0;
 		contentPane.add(btnrd, gbc_btnrd);
 		
-		JButton btnNewButton = new JButton(" 4th ");
+		JButton btnNewButton = new JButton("4th");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -276,11 +279,7 @@ public class Calendar extends JFrame {
 		gbc_btnNewButton.gridy = 0;
 		contentPane.add(btnNewButton, gbc_btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton(" 5th ");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
+		JButton btnNewButton_1 = new JButton("5th");
 		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
 		gbc_btnNewButton_1.anchor = GridBagConstraints.NORTH;
 		gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 5);
@@ -288,35 +287,35 @@ public class Calendar extends JFrame {
 		gbc_btnNewButton_1.gridy = 0;
 		contentPane.add(btnNewButton_1, gbc_btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton(" 6th ");
+		JButton btnNewButton_2 = new JButton("6th");
 		GridBagConstraints gbc_btnNewButton_2 = new GridBagConstraints();
 		gbc_btnNewButton_2.insets = new Insets(0, 0, 5, 5);
 		gbc_btnNewButton_2.gridx = 5;
 		gbc_btnNewButton_2.gridy = 0;
 		contentPane.add(btnNewButton_2, gbc_btnNewButton_2);
 		
-		JButton btnth = new JButton(" 7th ");
+		JButton btnth = new JButton("7th");
 		GridBagConstraints gbc_btnth = new GridBagConstraints();
 		gbc_btnth.insets = new Insets(0, 0, 5, 0);
 		gbc_btnth.gridx = 6;
 		gbc_btnth.gridy = 0;
 		contentPane.add(btnth, gbc_btnth);
 		
-		JButton btnth_1 = new JButton(" 8th ");
+		JButton btnth_1 = new JButton("8th");
 		GridBagConstraints gbc_btnth_1 = new GridBagConstraints();
 		gbc_btnth_1.insets = new Insets(0, 0, 5, 5);
 		gbc_btnth_1.gridx = 0;
 		gbc_btnth_1.gridy = 1;
 		contentPane.add(btnth_1, gbc_btnth_1);
 		
-		JButton btnth_2 = new JButton(" 9th ");
+		JButton btnth_2 = new JButton("9th");
 		GridBagConstraints gbc_btnth_2 = new GridBagConstraints();
 		gbc_btnth_2.insets = new Insets(0, 0, 5, 5);
 		gbc_btnth_2.gridx = 1;
 		gbc_btnth_2.gridy = 1;
 		contentPane.add(btnth_2, gbc_btnth_2);
 		
-		JButton btnth_3 = new JButton("10th");
+		JButton btnth_3 = new JButton("10th'");
 		GridBagConstraints gbc_btnth_3 = new GridBagConstraints();
 		gbc_btnth_3.insets = new Insets(0, 0, 5, 5);
 		gbc_btnth_3.gridx = 2;
