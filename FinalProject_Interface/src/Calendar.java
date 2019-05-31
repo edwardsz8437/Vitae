@@ -140,7 +140,8 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Event_Day dayUI = new Event_Day();
+				dayUI.openDayUI();
 			}
 		});
 		GridBagConstraints gbc_btnst = new GridBagConstraints();
