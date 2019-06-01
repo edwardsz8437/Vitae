@@ -140,7 +140,7 @@ public class Calendar extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				Event_Day dayUI = new Event_Day();
+				Event_Day_1st dayUI = new Event_Day_1st();
 				dayUI.openDayUI();
 			}
 		});
@@ -151,6 +151,12 @@ public class Calendar extends JFrame {
 		contentPane.add(btnst, gbc_btnst);
 		
 		JButton btnnd = new JButton("2nd");
+		btnnd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Event_Day_2nd dayUI = new Event_Day_2nd();
+				dayUI.openDayUI();
+			}
+		});
 		GridBagConstraints gbc_btnnd = new GridBagConstraints();
 		gbc_btnnd.insets = new Insets(0, 0, 5, 5);
 		gbc_btnnd.gridx = 1;
@@ -158,6 +164,12 @@ public class Calendar extends JFrame {
 		contentPane.add(btnnd, gbc_btnnd);
 		
 		JButton btnrd = new JButton(" 3rd ");
+		btnrd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Event_Day_3rd dayUI = new Event_Day_3rd();
+				dayUI.openDayUI();
+			}
+		});
 		GridBagConstraints gbc_btnrd = new GridBagConstraints();
 		gbc_btnrd.insets = new Insets(0, 0, 5, 5);
 		gbc_btnrd.gridx = 2;
@@ -167,6 +179,7 @@ public class Calendar extends JFrame {
 		JButton btnNewButton = new JButton(" 4th ");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
 			}
 		});
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();

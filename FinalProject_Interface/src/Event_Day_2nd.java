@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 
-public class Event_Day {
+public class Event_Day_2nd {
 
 	private JFrame frame;
 	private JTextField txtHoursOfSleep;
@@ -29,7 +29,7 @@ public class Event_Day {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Event_Day window = new Event_Day();
+					Event_Day_2nd window = new Event_Day_2nd();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +41,7 @@ public class Event_Day {
 	/**
 	 * Create the application.
 	 */
-	public Event_Day() {
+	public Event_Day_2nd() {
 		initialize();
 	}
 
@@ -88,7 +88,7 @@ public class Event_Day {
 		
 		txtMonthDay = new JTextField();
 		txtMonthDay.setEditable(false);
-		txtMonthDay.setText("MONTH - DAY");
+		txtMonthDay.setText("MONTH - 2nd");
 		txtMonthDay.setColumns(10);
 		
 		txtYourEvents = new JTextField();
