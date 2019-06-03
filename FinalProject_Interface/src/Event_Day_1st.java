@@ -1,3 +1,4 @@
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -62,7 +63,7 @@ public class Event_Day_1st {
 		txtHoursOfSleep.setColumns(10);
 		
 		txtMoodLevel = new JTextField();
-		txtMoodLevel.setEditable(false);
+		txtMoodLevel.setEditable(true);
 		txtMoodLevel.setText("     Mood Level");
 		txtMoodLevel.setColumns(10);
 		
