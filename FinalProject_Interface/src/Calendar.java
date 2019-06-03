@@ -13,6 +13,8 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class Calendar extends JFrame {
 
@@ -34,256 +36,94 @@ public class Calendar extends JFrame {
 			}
 		});
 	}
-	
-	public void setIndex(String x, String month)
-	{
-		x = month;
-	}
-	
 
 	/**
-	 * Create the fram.
+	 * Create the frame.
 	 */
 	public Calendar() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		String x = "oopsy woopsy this don't work";
 		String[] months = new String [12];
 		setBounds(100, 100, 476, 299);
-=======
-		setBounds(100, 100, 452, 356);
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
-		setBounds(100, 100, 452, 356);
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
-		setBounds(100, 100, 452, 356);
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
-		setBounds(100, 100, 452, 356);
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
-		setBounds(100, 100, 452, 356);
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
-		setBounds(100, 100, 452, 356);
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
-		setBounds(100, 100, 452, 356);
->>>>>>> parent of 37fb776... Calnedar UI Update
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		JMenu mnMonth = new JMenu("Month");
 		menuBar.add(mnMonth);
 		
 		JMenuItem mntmJanuary = new JMenuItem("January");
 		mnMonth.add(mntmJanuary);
 		months[0] = "January";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "January");
-			}
-		});
-
 		
 		JMenuItem mntmFebruary = new JMenuItem("February");
 		mnMonth.add(mntmFebruary);
 		months[1] = "February";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "February");
-			}
-		});
-
 		
 		JMenuItem mntmMarch = new JMenuItem("March");
 		mnMonth.add(mntmMarch);
 		months[2] = "March";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "March");
-			}
-		});
-
 		
 		JMenuItem mntmApril = new JMenuItem("April");
 		mnMonth.add(mntmApril);
 		months[3] = "April";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "April");
-			}
-		});
-
 		
 		JMenuItem mntmMay = new JMenuItem("May");
 		mnMonth.add(mntmMay);
 		months[4] = "May";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "May");
-			}
-		});
-
 		
 		JMenuItem mntmJune = new JMenuItem("June");
 		mnMonth.add(mntmJune);
 		months[5] = "June";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "June");
-			}
-		});
-
 		
 		JMenuItem mntmJuly = new JMenuItem("July");
 		mnMonth.add(mntmJuly);
 		months[6] = "July";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "July");
-			}
-		});
-
 		
 		JMenuItem mntmAugust = new JMenuItem("August");
 		mnMonth.add(mntmAugust);
 		months[7] = "August";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "August");
-			}
-		});
-
 		
 		JMenuItem mntmSeptember = new JMenuItem("September");
 		mnMonth.add(mntmSeptember);
 		months[8] = "September";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "September");
-			}
-		});
-
 		
 		JMenuItem mntmOctober = new JMenuItem("October");
 		mnMonth.add(mntmOctober);
 		months[9] = "October";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "October");
-			}
-		});
-
 		
 		JMenuItem mntmNovember = new JMenuItem("November");
 		mnMonth.add(mntmNovember);
 		months[10] = "November";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "November");
-			}
-		});
-
 		
 		JMenuItem mntmDecember = new JMenuItem("December");
 		mnMonth.add(mntmDecember);
 		months[11] = "December";
-		mntmJanuary.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				setIndex(x, "December");
-			}
-		});
-
-=======
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-		JButton btnMonth = new JButton("Month");
-		btnMonth.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		menuBar.add(btnMonth);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
 		
 		txtMonthyear = new JTextField();
 		txtMonthyear.setEditable(false);
 		txtMonthyear.setHorizontalAlignment(SwingConstants.CENTER);
-		txtMonthyear.setText(x);
+		txtMonthyear.setText(months[2]);
 		menuBar.add(txtMonthyear);
 		txtMonthyear.setColumns(10);
 		
-		JButton btnYear = new JButton("Year");
-		btnYear.setHorizontalAlignment(SwingConstants.TRAILING);
-		menuBar.add(btnYear);
+		JMenu mnYear = new JMenu("Year");
+		menuBar.add(mnYear);
+		
+		JMenuItem menuItem = new JMenuItem("2018");
+		mnYear.add(menuItem);
+		
+		JMenuItem menuItem_1 = new JMenuItem("2019");
+		mnYear.add(menuItem_1);
+		
+		JMenuItem menuItem_2 = new JMenuItem("2020");
+		mnYear.add(menuItem_2);
+		
+		JMenuItem menuItem_3 = new JMenuItem("2021");
+		mnYear.add(menuItem_3);
+		
+		JMenuItem menuItem_4 = new JMenuItem("2022");
+		mnYear.add(menuItem_4);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -294,41 +134,13 @@ public class Calendar extends JFrame {
 		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		JButton btnst = new JButton(" 1st ");
 		btnst.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-<<<<<<< HEAD
-				 int x = 0;
-=======
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
->>>>>>> parent of 37fb776... Calnedar UI Update
-		JButton btnst = new JButton("1st");
-		btnst.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
->>>>>>> parent of 37fb776... Calnedar UI Update
-=======
 				Event_Day_1st dayUI = new Event_Day_1st();
 				dayUI.openDayUI();
->>>>>>> c0bae7c33ad856a00abe406291328f2294628955
 			}
 		});
 		GridBagConstraints gbc_btnst = new GridBagConstraints();
@@ -350,9 +162,6 @@ public class Calendar extends JFrame {
 		gbc_btnnd.gridy = 0;
 		contentPane.add(btnnd, gbc_btnnd);
 		
-<<<<<<< HEAD
-		JButton btnrd = new JButton("3rd");
-=======
 		JButton btnrd = new JButton(" 3rd ");
 		btnrd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -360,14 +169,13 @@ public class Calendar extends JFrame {
 				dayUI.openDayUI();
 			}
 		});
->>>>>>> c0bae7c33ad856a00abe406291328f2294628955
 		GridBagConstraints gbc_btnrd = new GridBagConstraints();
 		gbc_btnrd.insets = new Insets(0, 0, 5, 5);
 		gbc_btnrd.gridx = 2;
 		gbc_btnrd.gridy = 0;
 		contentPane.add(btnrd, gbc_btnrd);
 		
-		JButton btnNewButton = new JButton("4th");
+		JButton btnNewButton = new JButton(" 4th ");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Event_Day_4th dayUI = new Event_Day_4th();
@@ -380,9 +188,6 @@ public class Calendar extends JFrame {
 		gbc_btnNewButton.gridy = 0;
 		contentPane.add(btnNewButton, gbc_btnNewButton);
 		
-<<<<<<< HEAD
-		JButton btnNewButton_1 = new JButton("5th");
-=======
 		JButton btnNewButton_1 = new JButton(" 5th ");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -390,7 +195,6 @@ public class Calendar extends JFrame {
 				dayUI.openDayUI();
 			}
 		});
->>>>>>> c0bae7c33ad856a00abe406291328f2294628955
 		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
 		gbc_btnNewButton_1.anchor = GridBagConstraints.NORTH;
 		gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 5);
@@ -398,9 +202,6 @@ public class Calendar extends JFrame {
 		gbc_btnNewButton_1.gridy = 0;
 		contentPane.add(btnNewButton_1, gbc_btnNewButton_1);
 		
-<<<<<<< HEAD
-		JButton btnNewButton_2 = new JButton("6th");
-=======
 		JButton btnNewButton_2 = new JButton(" 6th ");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -408,16 +209,12 @@ public class Calendar extends JFrame {
 				dayUI.openDayUI();
 			}
 		});
->>>>>>> c0bae7c33ad856a00abe406291328f2294628955
 		GridBagConstraints gbc_btnNewButton_2 = new GridBagConstraints();
 		gbc_btnNewButton_2.insets = new Insets(0, 0, 5, 5);
 		gbc_btnNewButton_2.gridx = 5;
 		gbc_btnNewButton_2.gridy = 0;
 		contentPane.add(btnNewButton_2, gbc_btnNewButton_2);
 		
-<<<<<<< HEAD
-		JButton btnth = new JButton("7th");
-=======
 		JButton btnth = new JButton(" 7th ");
 		btnth.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -425,16 +222,12 @@ public class Calendar extends JFrame {
 				dayUI.openDayUI();
 			}
 		});
->>>>>>> c0bae7c33ad856a00abe406291328f2294628955
 		GridBagConstraints gbc_btnth = new GridBagConstraints();
 		gbc_btnth.insets = new Insets(0, 0, 5, 0);
 		gbc_btnth.gridx = 6;
 		gbc_btnth.gridy = 0;
 		contentPane.add(btnth, gbc_btnth);
 		
-<<<<<<< HEAD
-		JButton btnth_1 = new JButton("8th");
-=======
 		JButton btnth_1 = new JButton(" 8th ");
 		btnth_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -442,16 +235,12 @@ public class Calendar extends JFrame {
 				dayUI.openDayUI();
 			}
 		});
->>>>>>> c0bae7c33ad856a00abe406291328f2294628955
 		GridBagConstraints gbc_btnth_1 = new GridBagConstraints();
 		gbc_btnth_1.insets = new Insets(0, 0, 5, 5);
 		gbc_btnth_1.gridx = 0;
 		gbc_btnth_1.gridy = 1;
 		contentPane.add(btnth_1, gbc_btnth_1);
 		
-<<<<<<< HEAD
-		JButton btnth_2 = new JButton("9th");
-=======
 		JButton btnth_2 = new JButton(" 9th ");
 		btnth_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -459,16 +248,12 @@ public class Calendar extends JFrame {
 				dayUI.openDayUI();
 			}
 		});
->>>>>>> c0bae7c33ad856a00abe406291328f2294628955
 		GridBagConstraints gbc_btnth_2 = new GridBagConstraints();
 		gbc_btnth_2.insets = new Insets(0, 0, 5, 5);
 		gbc_btnth_2.gridx = 1;
 		gbc_btnth_2.gridy = 1;
 		contentPane.add(btnth_2, gbc_btnth_2);
 		
-<<<<<<< HEAD
-		JButton btnth_3 = new JButton("10th'");
-=======
 		JButton btnth_3 = new JButton("10th");
 		btnth_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -476,7 +261,6 @@ public class Calendar extends JFrame {
 				dayUI.openDayUI();
 			}
 		});
->>>>>>> c0bae7c33ad856a00abe406291328f2294628955
 		GridBagConstraints gbc_btnth_3 = new GridBagConstraints();
 		gbc_btnth_3.insets = new Insets(0, 0, 5, 5);
 		gbc_btnth_3.gridx = 2;
@@ -758,3 +542,4 @@ public class Calendar extends JFrame {
 	}
 
 }
+
