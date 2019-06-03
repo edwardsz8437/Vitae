@@ -63,7 +63,7 @@ public class Event_Day_1st {
 		
 		txtMoodLevel = new JTextField();
 		txtMoodLevel.setEditable(false);
-		txtMoodLevel.setText("    Mood Level");
+		txtMoodLevel.setText("     Mood Level");
 		txtMoodLevel.setColumns(10);
 		
 		txtFinances = new JTextField();
