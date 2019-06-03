@@ -19,12 +19,17 @@ public Day(String monthName, int date, int yearNum, int moodLevel, int sleepAmou
 	this.monthName=monthName;
 	this.date=date;
 	this.yearNum=yearNum;
-	this.moodLevel=moodLevel;
+	this.setMoodLevel(moodLevel);
 	this.sleepAmount=sleepAmount;
 	this.finances=finances;
 }
 	
-
+public Day(String monthName, int date, int yearNum)
+{
+	this.monthName=monthName;
+	this.date=date;
+	this.yearNum=yearNum;
+}
 
 
 public void listAllEvents() //attain all Events from arrayList
@@ -40,16 +45,27 @@ public void listAllEvents() //attain all Events from arrayList
 }
 
 
-public String toString()
-{
-	return (monthName + " " + date + ", " + yearNum + 
-			"----------" + 
-			"Events: ");
+
+public int getMoodLevel() {
+	return moodLevel;
+}
+
+
+
+
+public void setMoodLevel(int moodLevel) {
+	this.moodLevel = moodLevel;
 }
 	
 	
 	
 }
+
+
+
+
+
+
 
 /*Date (instance variable)
 Events (stored in an array list) 
