@@ -72,17 +72,17 @@ public class Event_Day_4th {
 		txtFinances.setColumns(10);
 		
 		txtDouble = new JTextField();
-		txtDouble.setEditable(false);
+		txtDouble.setEditable(true);
 		txtDouble.setText("DOUBLE");
 		txtDouble.setColumns(10);
 		
 		txtDouble_1 = new JTextField();
-		txtDouble_1.setEditable(false);
+		txtDouble_1.setEditable(true);
 		txtDouble_1.setText("DOUBLE");
 		txtDouble_1.setColumns(10);
 		
 		txtInt = new JTextField();
-		txtInt.setEditable(false);
+		txtInt.setEditable(true);
 		txtInt.setText("INT");
 		txtInt.setColumns(10);
 		
