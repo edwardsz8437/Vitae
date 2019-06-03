@@ -1,3 +1,4 @@
+import java.util.Scanner; //change
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -61,10 +62,23 @@ public class Event_Day_1st {
 		txtHoursOfSleep.setText("  Hours of Sleep");
 		txtHoursOfSleep.setColumns(10);
 		
+		Day newDay=new Day("May", 1, 2019); //change for each day panel
+		Scanner reader = new Scanner(System.in); //change
 		txtMoodLevel = new JTextField();
-		txtMoodLevel.setEditable(false);
+		txtMoodLevel.setEditable(true);
 		txtMoodLevel.setText("     Mood Level");
 		txtMoodLevel.setColumns(10);
+		txtMoodLevel.text(reader.nextInt()); //change
+		if (userMood<=10 && userMood>=0) //change
+	{
+		newDay.setMoodLevel(userMood);
+	}
+	else 
+	{
+		System.out.println("Not a valid input");
+	}
+		
+		
 		
 		txtFinances = new JTextField();
 		txtFinances.setEditable(false);
