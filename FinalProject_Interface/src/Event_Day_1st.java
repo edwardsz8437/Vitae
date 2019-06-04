@@ -90,12 +90,12 @@ public class Event_Day_1st {
 		
 		txtDouble_1 = new JTextField();
 		txtDouble_1.setEditable(edit);
-		txtDouble_1.setText("" + first.getMoodLevel());
+		txtDouble_1.setText("$" + first.getFinances());
 		txtDouble_1.setColumns(10);
 		
 		txtInt = new JTextField();
 		txtInt.setEditable(edit);
-		txtInt.setText("$" + first.getFinances());
+		txtInt.setText("" + first.getMoodLevel());
 		txtInt.setColumns(10);
 		
 		txtMonthDay = new JTextField();

@@ -49,55 +49,59 @@ public class Event_Day_2nd {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
+		Day second = new Day("Janurary", 2, 2000, 7, 4, 150.00);
 		frame = new JFrame();
 		frame.setBounds(100, 100, 504, 512);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		boolean edit = false;
 		
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
 		txtHoursOfSleep = new JTextField();
-		txtHoursOfSleep.setEditable(false);
+		txtHoursOfSleep.setEditable(edit);
 		txtHoursOfSleep.setText("  Hours of Sleep");
 		txtHoursOfSleep.setColumns(10);
 		
 		txtMoodLevel = new JTextField();
-		txtMoodLevel.setEditable(false);
-		txtMoodLevel.setText("    Mood Level");
+		txtMoodLevel.setEditable(edit);
+		txtMoodLevel.setText("     Mood Level");
 		txtMoodLevel.setColumns(10);
 		
 		txtFinances = new JTextField();
-		txtFinances.setEditable(false);
+		txtFinances.setEditable(edit);
 		txtFinances.setText("      Finances");
 		txtFinances.setColumns(10);
 		
 		txtDouble = new JTextField();
-		txtDouble.setEditable(true);
-		txtDouble.setText("DOUBLE");
+		txtDouble.setEditable(edit);
+		txtDouble.setText("" + second.getSleepAmount());
 		txtDouble.setColumns(10);
 		
 		txtDouble_1 = new JTextField();
-		txtDouble_1.setEditable(true);
-		txtDouble_1.setText("DOUBLE");
+		txtDouble_1.setEditable(edit);
+		txtDouble_1.setText("$" + second.getFinances());
 		txtDouble_1.setColumns(10);
 		
 		txtInt = new JTextField();
-		txtInt.setEditable(true);
-		txtInt.setText("INT");
+		txtInt.setEditable(edit);
+		txtInt.setText("" + second.getMoodLevel());
 		txtInt.setColumns(10);
 		
 		txtMonthDay = new JTextField();
-		txtMonthDay.setEditable(false);
-		txtMonthDay.setText("MONTH - 2nd");
+		txtMonthDay.setEditable(edit);
+		txtMonthDay.setText(second.getMonthName() + " " + second.getDate() + ", " + second.getYearNum());
 		txtMonthDay.setColumns(10);
 		
 		txtYourEvents = new JTextField();
-		txtYourEvents.setEditable(false);
+		txtYourEvents.setEditable(edit);
 		txtYourEvents.setText("\t\tYOUR EVENTS");
 		txtYourEvents.setColumns(10);
 		
 		txtEvents = new JTextField();
-		txtEvents.setEditable(false);
+		txtEvents.setEditable(edit);
 		txtEvents.setText("EVENTS");
 		txtEvents.setColumns(10);
 		
