@@ -50,7 +50,7 @@ public class Event_Day_2nd {
 	 */
 	private void initialize() {
 		
-		Day second = new Day("Janurary", 2, 2000, 7, 4, 150.00);
+		Day second = new Day("Janurary", 2, 2019, 0, 0, 000.00);
 		frame = new JFrame();
 		frame.setBounds(100, 100, 504, 512);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

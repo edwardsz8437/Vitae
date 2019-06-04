@@ -56,50 +56,53 @@ public class Event_Day_16th {
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
+		Day sixteenth = new Day("Janurary", 16, 2019, 0, 0, 000.00);
+		boolean edit = false;
 		txtHoursOfSleep = new JTextField();
-		txtHoursOfSleep.setEditable(false);
+		txtHoursOfSleep.setEditable(edit);
 		txtHoursOfSleep.setText("  Hours of Sleep");
 		txtHoursOfSleep.setColumns(10);
 		
 		txtMoodLevel = new JTextField();
-		txtMoodLevel.setEditable(false);
-		txtMoodLevel.setText("    Mood Level");
+		txtMoodLevel.setEditable(edit);
+		txtMoodLevel.setText("     Mood Level");
 		txtMoodLevel.setColumns(10);
 		
 		txtFinances = new JTextField();
-		txtFinances.setEditable(false);
+		txtFinances.setEditable(edit);
 		txtFinances.setText("      Finances");
 		txtFinances.setColumns(10);
 		
 		txtDouble = new JTextField();
-		txtDouble.setEditable(true);
-		txtDouble.setText("DOUBLE");
+		txtDouble.setEditable(edit);
+		txtDouble.setText("" + sixteenth.getSleepAmount());
 		txtDouble.setColumns(10);
 		
 		txtDouble_1 = new JTextField();
-		txtDouble_1.setEditable(true);
-		txtDouble_1.setText("DOUBLE");
+		txtDouble_1.setEditable(edit);
+		txtDouble_1.setText("$" + sixteenth.getFinances());
 		txtDouble_1.setColumns(10);
 		
 		txtInt = new JTextField();
-		txtInt.setEditable(true);
-		txtInt.setText("INT");
+		txtInt.setEditable(edit);
+		txtInt.setText("" + sixteenth.getMoodLevel());
 		txtInt.setColumns(10);
 		
 		txtMonthDay = new JTextField();
-		txtMonthDay.setEditable(false);
-		txtMonthDay.setText("MONTH - 16th");
+		txtMonthDay.setEditable(edit);
+		txtMonthDay.setText(sixteenth.getMonthName() + " " + sixteenth.getDate() + ", " + sixteenth.getYearNum());
 		txtMonthDay.setColumns(10);
 		
 		txtYourEvents = new JTextField();
-		txtYourEvents.setEditable(false);
+		txtYourEvents.setEditable(edit);
 		txtYourEvents.setText("\t\tYOUR EVENTS");
 		txtYourEvents.setColumns(10);
 		
 		txtEvents = new JTextField();
-		txtEvents.setEditable(false);
+		txtEvents.setEditable(edit);
 		txtEvents.setText("EVENTS");
 		txtEvents.setColumns(10);
+		
 		
 		JButton btnNewButton = new JButton("EDIT DAY");
 		GroupLayout gl_panel = new GroupLayout(panel);

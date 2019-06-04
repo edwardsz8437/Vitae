@@ -9,10 +9,8 @@ import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
 import java.awt.event.ActionEvent;
 
-import java.util.Scanner;
 public class Event_Day_1st {
 
 	private JFrame frame;
@@ -54,7 +52,7 @@ public class Event_Day_1st {
 	 */
 	private void initialize() 
 	{
-		Day first = new Day("Janurary", 1, 2000, 5, 2, 100.00);
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 504, 512);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -62,21 +60,16 @@ public class Event_Day_1st {
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
-		boolean edit = false;
+		
 		
 		JButton btnNewButton = new JButton("EDIT DAY");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Scanner update = new Scanner(System.in);
-				System.out.println("How long(hours) did you sleep for?");
-				Double sleep = update.nextDouble();
-				System.out.println("What is your mood level(1-10) today?");
-				int mood = update.nextInt();
-				System.out.println("How much money have you spent today?");
-				Double finances = update.nextDouble();
 			}
 		});
 		
+		Day first = new Day("Janurary", 1, 2019, 0, 0, 000.00);
+		boolean edit = false;
 		txtHoursOfSleep = new JTextField();
 		txtHoursOfSleep.setEditable(edit);
 		txtHoursOfSleep.setText("  Hours of Sleep");

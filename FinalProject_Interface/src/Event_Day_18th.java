@@ -56,48 +56,50 @@ public class Event_Day_18th {
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
+		Day eighteenth = new Day("Janurary", 18, 2019, 0, 0, 000.00);
+		boolean edit = false;
 		txtHoursOfSleep = new JTextField();
-		txtHoursOfSleep.setEditable(false);
+		txtHoursOfSleep.setEditable(edit);
 		txtHoursOfSleep.setText("  Hours of Sleep");
 		txtHoursOfSleep.setColumns(10);
 		
 		txtMoodLevel = new JTextField();
-		txtMoodLevel.setEditable(false);
-		txtMoodLevel.setText("    Mood Level");
+		txtMoodLevel.setEditable(edit);
+		txtMoodLevel.setText("     Mood Level");
 		txtMoodLevel.setColumns(10);
 		
 		txtFinances = new JTextField();
-		txtFinances.setEditable(false);
+		txtFinances.setEditable(edit);
 		txtFinances.setText("      Finances");
 		txtFinances.setColumns(10);
 		
 		txtDouble = new JTextField();
-		txtDouble.setEditable(true);
-		txtDouble.setText("DOUBLE");
+		txtDouble.setEditable(edit);
+		txtDouble.setText("" + eighteenth.getSleepAmount());
 		txtDouble.setColumns(10);
 		
 		txtDouble_1 = new JTextField();
-		txtDouble_1.setEditable(true);
-		txtDouble_1.setText("DOUBLE");
+		txtDouble_1.setEditable(edit);
+		txtDouble_1.setText("$" + eighteenth.getFinances());
 		txtDouble_1.setColumns(10);
 		
 		txtInt = new JTextField();
-		txtInt.setEditable(true);
-		txtInt.setText("INT");
+		txtInt.setEditable(edit);
+		txtInt.setText("" + eighteenth.getMoodLevel());
 		txtInt.setColumns(10);
 		
 		txtMonthDay = new JTextField();
-		txtMonthDay.setEditable(false);
-		txtMonthDay.setText("MONTH - 18th");
+		txtMonthDay.setEditable(edit);
+		txtMonthDay.setText(eighteenth.getMonthName() + " " + eighteenth.getDate() + ", " + eighteenth.getYearNum());
 		txtMonthDay.setColumns(10);
 		
 		txtYourEvents = new JTextField();
-		txtYourEvents.setEditable(false);
+		txtYourEvents.setEditable(edit);
 		txtYourEvents.setText("\t\tYOUR EVENTS");
 		txtYourEvents.setColumns(10);
 		
 		txtEvents = new JTextField();
-		txtEvents.setEditable(false);
+		txtEvents.setEditable(edit);
 		txtEvents.setText("EVENTS");
 		txtEvents.setColumns(10);
 		
