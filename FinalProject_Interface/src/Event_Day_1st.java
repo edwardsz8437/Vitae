@@ -46,24 +46,13 @@ public class Event_Day_1st {
 	public Event_Day_1st() {
 		initialize();
 	}
-	
-	public void toggle(boolean edit)
-	{
-		if(edit == false)
-		{
-			edit = true;
-		}
-		if(edit == true)
-		{
-			edit = false;
-		}
-	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() 
 	{
+		Day first = new Day("Janurary", 1, 2000, 5, 2, 100.00);
 		frame = new JFrame();
 		frame.setBounds(100, 100, 504, 512);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -75,9 +64,7 @@ public class Event_Day_1st {
 		
 		JButton btnNewButton = new JButton("EDIT DAY");
 		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) 
-			{
-				toggle(edit);
+			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
 		
@@ -98,22 +85,22 @@ public class Event_Day_1st {
 		
 		txtDouble = new JTextField();
 		txtDouble.setEditable(edit);
-		txtDouble.setText("DOUBLE");
+		txtDouble.setText("" + first.getSleepAmount());
 		txtDouble.setColumns(10);
 		
 		txtDouble_1 = new JTextField();
 		txtDouble_1.setEditable(edit);
-		txtDouble_1.setText("DOUBLE");
+		txtDouble_1.setText("" + first.getMoodLevel());
 		txtDouble_1.setColumns(10);
 		
 		txtInt = new JTextField();
 		txtInt.setEditable(edit);
-		txtInt.setText("INT");
+		txtInt.setText("$" + first.getFinances());
 		txtInt.setColumns(10);
 		
 		txtMonthDay = new JTextField();
 		txtMonthDay.setEditable(edit);
-		txtMonthDay.setText("MONTH - 1st");
+		txtMonthDay.setText(first.getMonthName() + " " + first.getDate() + ", " + first.getYearNum());
 		txtMonthDay.setColumns(10);
 		
 		txtYourEvents = new JTextField();
