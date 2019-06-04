@@ -9,8 +9,10 @@ import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 import java.awt.event.ActionEvent;
 
+import java.util.Scanner;
 public class Event_Day_1st {
 
 	private JFrame frame;
@@ -65,6 +67,13 @@ public class Event_Day_1st {
 		JButton btnNewButton = new JButton("EDIT DAY");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				Scanner update = new Scanner(System.in);
+				System.out.println("How long(hours) did you sleep for?");
+				Double sleep = update.nextDouble();
+				System.out.println("What is your mood level(1-10) today?");
+				int mood = update.nextInt();
+				System.out.println("How much money have you spent today?");
+				Double finances = update.nextDouble();
 			}
 		});
 		
