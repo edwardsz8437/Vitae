@@ -7,7 +7,7 @@ private String monthName;
 private int date;
 private int yearNum;
 private int moodLevel;
-private int sleepAmount;
+private double sleepAmount;
 private double finances;
 
 
@@ -76,11 +76,11 @@ public void setMoodLevel(int moodLevel) {
 	this.moodLevel = moodLevel;
 }
 
-public int getSleepAmount() {
+public double getSleepAmount() {
 	return sleepAmount;
 }
 
-public void setSleepAmount(int sleepAmount) {
+public void setSleepAmount(double sleepAmount) {
 	this.sleepAmount = sleepAmount;
 }
 

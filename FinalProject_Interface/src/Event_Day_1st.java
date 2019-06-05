@@ -8,6 +8,8 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
+
 import java.awt.event.ActionListener;
 import java.util.Scanner;
 import java.awt.event.ActionEvent;
@@ -19,9 +21,9 @@ public class Event_Day_1st {
 	private JTextField txtHoursOfSleep;
 	private JTextField txtMoodLevel;
 	private JTextField txtFinances;
-	private JTextField txtDouble;
-	private JTextField txtDouble_1;
-	private JTextField txtInt;
+	private JFormattedTextField txtDouble;
+	private JFormattedTextField txtDouble_1;
+	private JFormattedTextField txtInt;
 	private JTextField txtMonthDay;
 	private JTextField txtYourEvents;
 	private JTextField txtEvents;
@@ -63,17 +65,28 @@ public class Event_Day_1st {
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
 		boolean edit = false;
+	
 		
 		JButton btnNewButton = new JButton("EDIT DAY");
 		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				Scanner update = new Scanner(System.in);
-				System.out.println("How long(hours) did you sleep for?");
-				Double sleep = update.nextDouble();
-				System.out.println("What is your mood level(1-10) today?");
-				int mood = update.nextInt();
-				System.out.println("How much money have you spent today?");
-				Double finances = update.nextDouble();
+			public void actionPerformed(ActionEvent arg0) {	
+				int check = 0;
+				while(check < 3)
+				{
+					System.out.println("entering print line" + check);//DEBUG
+					Scanner update = new Scanner(System.in);
+					System.out.println("How long(hours) did you sleep for?");
+					first.setSleepAmount(update.nextDouble());
+					check += 1;
+					System.out.println("What is your mood level(1-10) today?");
+					first.setMoodLevel(update.nextInt());
+					check +=1;
+					System.out.println("How much money have you spent today?");
+					first.setFinances(update.nextDouble());
+					check += 1;
+					update.close();
+					check += 1;
+				}
 			}
 		});
 		
@@ -92,17 +105,17 @@ public class Event_Day_1st {
 		txtFinances.setText("      Finances");
 		txtFinances.setColumns(10);
 		
-		txtDouble = new JTextField();
+		txtDouble = new JFormattedTextField();
 		txtDouble.setEditable(edit);
 		txtDouble.setText("" + first.getSleepAmount());
 		txtDouble.setColumns(10);
 		
-		txtDouble_1 = new JTextField();
+		txtDouble_1 = new JFormattedTextField();
 		txtDouble_1.setEditable(edit);
 		txtDouble_1.setText("$" + first.getFinances());
 		txtDouble_1.setColumns(10);
 		
-		txtInt = new JTextField();
+		txtInt = new JFormattedTextField();
 		txtInt.setEditable(edit);
 		txtInt.setText("" + first.getMoodLevel());
 		txtInt.setColumns(10);
@@ -124,7 +137,9 @@ public class Event_Day_1st {
 		
 		JButton btnSave = new JButton("Save");
 		btnSave.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent arg0)
+			{
+				
 			}
 		});
 		
