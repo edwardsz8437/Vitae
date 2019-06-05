@@ -381,7 +381,13 @@ public class Calendar extends JFrame {
 			}
 		});
 		
-		JButton btnGetCharts = new JButton("Get Charts");
+		JButton btnGetCharts = new JButton("Get Avg Mood");
+		btnGetCharts.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Month moodAvg = new Month();
+				moodAvg.findAverageMood();
+			}
+		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
