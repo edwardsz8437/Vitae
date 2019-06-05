@@ -2,24 +2,30 @@ import java.util.ArrayList;
 
 public class Month {
 	
-	ArrayList<Day> days = new ArrayList<Day>(); //initializes an array of events that belong to each day 
-	Day first=new Day("May", 1, 2019, 5, 0, 0.0);
-	Day second=new Day("May", 2, 2019, 8, 0, 0.0);
-	Day third=new Day("May", 3, 2019, 2, 0, 0.0);
+	private ArrayList<Day> days = new ArrayList<Day>(); //initializes an array of events that belong to each day 
 	
-	public double findAverageMood()
+	public Month ()
 	{
-		//remove all array objects in case user made changes, start from blank slate
-		
-		for (int i=0;i<days.size();i++)
-		{
-			days.remove(i);
-			
-		}
+		this.days=days;
+	}
+	
+	public Month (Day first, Day second, Day third)
+	{
 		
 		days.add(first);
 		days.add(second);
 		days.add(third);
+		
+		
+	}
+	
+	Day first=new Day("May", 1, 2019, 5, 0, 0);
+	Day second=new Day("May", 2, 2019, 0, 0, 0);
+	Day third=new Day("May", 3, 2019, 0, 0, 0);
+	
+	public double findAverageMood()
+	{
+		
 		
 		int totalMood = 0;
 		double average = 0;
