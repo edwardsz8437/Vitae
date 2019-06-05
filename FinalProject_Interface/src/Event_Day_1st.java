@@ -9,8 +9,10 @@ import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 import java.awt.event.ActionEvent;
 
+import java.util.Scanner;
 public class Event_Day_1st {
 
 	private JFrame frame;
@@ -52,7 +54,7 @@ public class Event_Day_1st {
 	 */
 	private void initialize() 
 	{
-		
+		Day first = new Day("Janurary", 1, 2000, 0, 0, 0);
 		frame = new JFrame();
 		frame.setBounds(100, 100, 504, 512);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -60,16 +62,21 @@ public class Event_Day_1st {
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
-		
+		boolean edit = false;
 		
 		JButton btnNewButton = new JButton("EDIT DAY");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				Scanner update = new Scanner(System.in);
+				System.out.println("How long(hours) did you sleep for?");
+				Double sleep = update.nextDouble();
+				System.out.println("What is your mood level(1-10) today?");
+				int mood = update.nextInt();
+				System.out.println("How much money have you spent today?");
+				Double finances = update.nextDouble();
 			}
 		});
 		
-		Day first = new Day("Janurary", 1, 2019, 0, 0, 000.00);
-		boolean edit = false;
 		txtHoursOfSleep = new JTextField();
 		txtHoursOfSleep.setEditable(edit);
 		txtHoursOfSleep.setText("  Hours of Sleep");
@@ -115,16 +122,22 @@ public class Event_Day_1st {
 		txtEvents.setText("EVENTS");
 		txtEvents.setColumns(10);
 		
+		JButton btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		
 		
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
-			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
+			gl_panel.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_panel.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
-						.addComponent(txtEvents, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+						.addComponent(txtEvents, GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
 						.addComponent(txtYourEvents, GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
-						.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
+						.addGroup(gl_panel.createSequentialGroup()
 							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING, false)
 								.addGroup(gl_panel.createSequentialGroup()
 									.addComponent(txtHoursOfSleep, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -140,7 +153,10 @@ public class Event_Day_1st {
 									.addComponent(txtDouble_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
 							.addGap(18)
 							.addComponent(txtMonthDay, GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE))
-						.addComponent(btnNewButton, Alignment.LEADING))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(btnNewButton)
+							.addPreferredGap(ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
+							.addComponent(btnSave)))
 					.addContainerGap())
 		);
 		gl_panel.setVerticalGroup(
@@ -166,7 +182,9 @@ public class Event_Day_1st {
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(txtEvents, GroupLayout.PREFERRED_SIZE, 296, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(btnNewButton)
+					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnNewButton)
+						.addComponent(btnSave))
 					.addContainerGap())
 		);
 		panel.setLayout(gl_panel);

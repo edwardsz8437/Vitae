@@ -1,4 +1,6 @@
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -56,52 +58,56 @@ public class Event_Day_15th {
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
-		Day fifteenth = new Day("Janurary", 15, 2019, 0, 0, 000.00);
-		boolean edit = false;
 		txtHoursOfSleep = new JTextField();
-		txtHoursOfSleep.setEditable(edit);
+		txtHoursOfSleep.setEditable(false);
 		txtHoursOfSleep.setText("  Hours of Sleep");
 		txtHoursOfSleep.setColumns(10);
 		
 		txtMoodLevel = new JTextField();
-		txtMoodLevel.setEditable(edit);
-		txtMoodLevel.setText("     Mood Level");
+		txtMoodLevel.setEditable(false);
+		txtMoodLevel.setText("    Mood Level");
 		txtMoodLevel.setColumns(10);
 		
 		txtFinances = new JTextField();
-		txtFinances.setEditable(edit);
+		txtFinances.setEditable(false);
 		txtFinances.setText("      Finances");
 		txtFinances.setColumns(10);
 		
 		txtDouble = new JTextField();
-		txtDouble.setEditable(edit);
-		txtDouble.setText("" + fifteenth.getSleepAmount());
+		txtDouble.setEditable(true);
+		txtDouble.setText("DOUBLE");
 		txtDouble.setColumns(10);
 		
 		txtDouble_1 = new JTextField();
-		txtDouble_1.setEditable(edit);
-		txtDouble_1.setText("$" + fifteenth.getFinances());
+		txtDouble_1.setEditable(true);
+		txtDouble_1.setText("DOUBLE");
 		txtDouble_1.setColumns(10);
 		
 		txtInt = new JTextField();
-		txtInt.setEditable(edit);
-		txtInt.setText("" + fifteenth.getMoodLevel());
+		txtInt.setEditable(true);
+		txtInt.setText("INT");
 		txtInt.setColumns(10);
 		
 		txtMonthDay = new JTextField();
-		txtMonthDay.setEditable(edit);
-		txtMonthDay.setText(fifteenth.getMonthName() + " " + fifteenth.getDate() + ", " + fifteenth.getYearNum());
+		txtMonthDay.setEditable(false);
+		txtMonthDay.setText("MONTH - 15th");
 		txtMonthDay.setColumns(10);
 		
 		txtYourEvents = new JTextField();
-		txtYourEvents.setEditable(edit);
+		txtYourEvents.setEditable(false);
 		txtYourEvents.setText("\t\tYOUR EVENTS");
 		txtYourEvents.setColumns(10);
 		
 		txtEvents = new JTextField();
-		txtEvents.setEditable(edit);
+		txtEvents.setEditable(false);
 		txtEvents.setText("EVENTS");
 		txtEvents.setColumns(10);
+		
+		JButton btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		
 		JButton btnNewButton = new JButton("EDIT DAY");
 		GroupLayout gl_panel = new GroupLayout(panel);
