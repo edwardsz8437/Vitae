@@ -73,7 +73,6 @@ public class Event_Day_1st {
 				int check = 0;
 				while(check < 3)
 				{
-					System.out.println("entering print line" + check);//DEBUG
 					Scanner update = new Scanner(System.in);
 					System.out.println("How long(hours) did you sleep for?");
 					first.setSleepAmount(update.nextDouble());
