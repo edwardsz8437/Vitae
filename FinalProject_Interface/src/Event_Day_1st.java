@@ -43,6 +43,21 @@ public class Event_Day_1st {
 			}
 		});
 	}
+	
+	public static void refreshDayUI() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Event_Day_1st window = new Event_Day_1st();
+					window.frame.revalidate();
+					
+					System.out.println("It refreshed");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
 	/**
 	 * Create the application.
@@ -69,13 +84,19 @@ public class Event_Day_1st {
 		
 		JButton btnNewButton = new JButton("EDIT DAY");
 		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {	
+			public void actionPerformed(ActionEvent arg0) {
+				int mood = 0;
+				double sleep = 0;
+				double finances = 0;
 				int check = 0;
 				while(check < 3)
 				{
+					System.out.println("entering print line" + check);//DEBUG
 					Scanner update = new Scanner(System.in);
 					System.out.println("How long(hours) did you sleep for?");
 					first.setSleepAmount(update.nextDouble());
+					sleep = first.getSleepAmount();
+					System.out.println("Sleep has been gotton...");
 					check += 1;
 					System.out.println("What is your mood level(1-10) today?");
 					first.setMoodLevel(update.nextInt());
@@ -134,13 +155,13 @@ public class Event_Day_1st {
 		txtEvents.setText("EVENTS");
 		txtEvents.setColumns(10);
 		
-		JButton btnSave = new JButton("Save");
+		JButton btnSave = new JButton("Refresh");
 		btnSave.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0)
-			{
-				
+			public void actionPerformed(ActionEvent arg0) {
+				Event_Day_1st.refreshDayUI();
 			}
 		});
+		
 		
 		
 		GroupLayout gl_panel = new GroupLayout(panel);
