@@ -79,7 +79,7 @@ public class Event_Day_1st {
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
-		boolean edit = false;
+		boolean edit = true;
 	
 		
 		JButton btnNewButton = new JButton("EDIT DAY");
@@ -111,17 +111,17 @@ public class Event_Day_1st {
 		});
 		
 		txtHoursOfSleep = new JTextField();
-		txtHoursOfSleep.setEditable(edit);
+		txtHoursOfSleep.setEditable(false);
 		txtHoursOfSleep.setText("  Hours of Sleep");
 		txtHoursOfSleep.setColumns(10);
 		
 		txtMoodLevel = new JTextField();
-		txtMoodLevel.setEditable(edit);
+		txtMoodLevel.setEditable(false);
 		txtMoodLevel.setText("     Mood Level");
 		txtMoodLevel.setColumns(10);
 		
 		txtFinances = new JTextField();
-		txtFinances.setEditable(edit);
+		txtFinances.setEditable(false);
 		txtFinances.setText("      Finances");
 		txtFinances.setColumns(10);
 		
@@ -141,12 +141,12 @@ public class Event_Day_1st {
 		txtInt.setColumns(10);
 		
 		txtMonthDay = new JTextField();
-		txtMonthDay.setEditable(edit);
+		txtMonthDay.setEditable(false);
 		txtMonthDay.setText(first.getMonthName() + " " + first.getDate() + ", " + first.getYearNum());
 		txtMonthDay.setColumns(10);
 		
 		txtYourEvents = new JTextField();
-		txtYourEvents.setEditable(edit);
+		txtYourEvents.setEditable(false);
 		txtYourEvents.setText("\t\tYOUR EVENTS");
 		txtYourEvents.setColumns(10);
 		
