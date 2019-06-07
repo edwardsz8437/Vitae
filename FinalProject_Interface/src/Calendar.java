@@ -381,26 +381,22 @@ public class Calendar extends JFrame {
 			}
 		});
 		
-		JButton btnGetCharts = new JButton("Get Avg Mood");
-		btnGetCharts.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Month moodAvg = new Month();
-				moodAvg.findAverageMood();
-			}
-		});
-		
-		JButton btnGetAvgSleep = new JButton("Get Avg Sleep");
+		JButton btnGetAvgSleep = new JButton("Get Averages");
 		btnGetAvgSleep.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				Day first=new Day("May", 1, 2019, 5, 3, 20);
+				Day second=new Day("May", 2, 2019, 7, 9, 50);
+				Day third=new Day("May", 3, 2019, 8, 4, 34.67);
+				Day fourth=new Day("May", 4, 2019, 2, 7, 200);
+				Day fifth=new Day("May", 5, 2019, 9, 6, 36);
+				Day sixth=new Day("May", 6, 2019, 10, 6.3, 67);
+				Day seventh=new Day("May", 7, 2019, 8, 7.5, 24);
+				Month May=new Month(first, second, third, fourth, fifth, sixth, seventh);
+
+				System.out.println("Average mood: " + May.findAverageMood());
+				System.out.println("Average sleep: " + May.findAverageSleep());
+				System.out.println("Average finance: " + May.findAverageFinances());	
 			}
-		});
-		
-		JButton btnGetAvgFinaces = new JButton("Get Avg Finaces");
-		btnGetAvgFinaces.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-			
 		});
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -470,17 +466,13 @@ public class Calendar extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(1)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(btnGetCharts)
+								.addComponent(btnGetAvgSleep)
 								.addGroup(gl_contentPane.createSequentialGroup()
 									.addComponent(btnth_21)
 									.addGap(6)
 									.addComponent(btnth_22)
 									.addGap(6)
-									.addComponent(btnth_23))))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addComponent(btnGetAvgSleep)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(btnGetAvgFinaces)))
+									.addComponent(btnth_23)))))
 					.addContainerGap(33, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
@@ -526,13 +518,9 @@ public class Calendar extends JFrame {
 						.addComponent(btnth_21)
 						.addComponent(btnth_22)
 						.addComponent(btnth_23))
-					.addPreferredGap(ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnGetAvgSleep)
-						.addComponent(btnGetAvgFinaces))
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(btnGetCharts)
-					.addContainerGap())
+					.addPreferredGap(ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+					.addComponent(btnGetAvgSleep)
+					.addGap(32))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
