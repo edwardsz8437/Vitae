@@ -106,7 +106,7 @@ public class Calendar extends JFrame {
 		txtMonthyear = new JTextField();
 		txtMonthyear.setEditable(false);
 		txtMonthyear.setHorizontalAlignment(SwingConstants.CENTER);
-		txtMonthyear.setText(months[2]);
+		txtMonthyear.setText(months[0]);
 		menuBar.add(txtMonthyear);
 		txtMonthyear.setColumns(10);
 		
