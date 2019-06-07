@@ -9,19 +9,23 @@ public class Month {
 		this.days=days;
 	}
 	
-	public Month (Day first, Day second, Day third)
+	public Month (Day first, Day second, Day third, Day fourth, Day fifth, Day sixth, Day seventh)
 	{
 		
 		days.add(first);
 		days.add(second);
 		days.add(third);
+		days.add(fourth);
+		days.add(fifth);
+		days.add(sixth);
+		days.add(seventh);
 		
 		
 	}
 	
-	Day first=new Day("May", 1, 2019, 5, 0, 0);
-	Day second=new Day("May", 2, 2019, 0, 0, 0);
-	Day third=new Day("May", 3, 2019, 0, 0, 0);
+	Day first=new Day("May", 1, 2019, 5, 3, 100);
+	Day second=new Day("May", 2, 2019, 7, 3, 30);
+	Day third=new Day("May", 3, 2019, 6, 7, 2);
 	
 	public double findAverageMood()
 	{		

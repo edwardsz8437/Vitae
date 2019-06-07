@@ -17,7 +17,7 @@ import java.awt.event.ActionEvent;
 import java.util.Scanner;
 public class Event_Day_1st {
 
-	private JFrame frame;
+	JFrame frame;
 	private JTextField txtHoursOfSleep;
 	private JTextField txtMoodLevel;
 	private JTextField txtFinances;
@@ -49,7 +49,7 @@ public class Event_Day_1st {
 			public void run() {
 				try {
 					Event_Day_1st window = new Event_Day_1st();
-					window.frame.revalidate();
+					window.frame.repaint();
 					
 					System.out.println("It refreshed");
 				} catch (Exception e) {
@@ -79,8 +79,7 @@ public class Event_Day_1st {
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
-		boolean edit = true;
-	
+		boolean edit = false;
 		
 		JButton btnNewButton = new JButton("EDIT DAY");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -88,6 +87,7 @@ public class Event_Day_1st {
 				int mood = 0;
 				double sleep = 0;
 				double finances = 0;
+			
 				int check = 0;
 				while(check < 3)
 				{
@@ -96,13 +96,15 @@ public class Event_Day_1st {
 					System.out.println("How long(hours) did you sleep for?");
 					first.setSleepAmount(update.nextDouble());
 					sleep = first.getSleepAmount();
-					System.out.println("Sleep has been gotton...");
+					System.out.println("Sleep...");
 					check += 1;
 					System.out.println("What is your mood level(1-10) today?");
 					first.setMoodLevel(update.nextInt());
+					System.out.println("Mood...");
 					check +=1;
 					System.out.println("How much money have you spent today?");
 					first.setFinances(update.nextDouble());
+					System.out.println("Finances...");
 					check += 1;
 					update.close();
 					check += 1;
@@ -111,17 +113,17 @@ public class Event_Day_1st {
 		});
 		
 		txtHoursOfSleep = new JTextField();
-		txtHoursOfSleep.setEditable(false);
+		txtHoursOfSleep.setEditable(edit);
 		txtHoursOfSleep.setText("  Hours of Sleep");
 		txtHoursOfSleep.setColumns(10);
 		
 		txtMoodLevel = new JTextField();
-		txtMoodLevel.setEditable(false);
+		txtMoodLevel.setEditable(edit);
 		txtMoodLevel.setText("     Mood Level");
 		txtMoodLevel.setColumns(10);
 		
 		txtFinances = new JTextField();
-		txtFinances.setEditable(false);
+		txtFinances.setEditable(edit);
 		txtFinances.setText("      Finances");
 		txtFinances.setColumns(10);
 		
@@ -141,12 +143,12 @@ public class Event_Day_1st {
 		txtInt.setColumns(10);
 		
 		txtMonthDay = new JTextField();
-		txtMonthDay.setEditable(false);
+		txtMonthDay.setEditable(edit);
 		txtMonthDay.setText(first.getMonthName() + " " + first.getDate() + ", " + first.getYearNum());
 		txtMonthDay.setColumns(10);
 		
 		txtYourEvents = new JTextField();
-		txtYourEvents.setEditable(false);
+		txtYourEvents.setEditable(edit);
 		txtYourEvents.setText("\t\tYOUR EVENTS");
 		txtYourEvents.setColumns(10);
 		
