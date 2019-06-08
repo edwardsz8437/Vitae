@@ -15,7 +15,7 @@ import java.util.Scanner;
 import java.awt.event.ActionEvent;
 
 import java.util.Scanner;
-public class Event_Day_1st {
+public class Event_Day_30th {
 
 	JFrame frame;
 	private JTextField txtHoursOfSleep;
@@ -35,7 +35,7 @@ public class Event_Day_1st {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Event_Day_1st window = new Event_Day_1st();
+					Event_Day_30th window = new Event_Day_30th();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +48,7 @@ public class Event_Day_1st {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Event_Day_1st window = new Event_Day_1st();
+					Event_Day_30th window = new Event_Day_30th();
 					window.frame.repaint();
 					
 					System.out.println("It refreshed");
@@ -62,7 +62,7 @@ public class Event_Day_1st {
 	/**
 	 * Create the application.
 	 */
-	public Event_Day_1st() {
+	public Event_Day_30th() {
 		initialize();
 	}
 
@@ -160,7 +160,7 @@ public class Event_Day_1st {
 		JButton btnSave = new JButton("Refresh");
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Event_Day_1st.refreshDayUI();
+				Event_Day_30th.refreshDayUI();
 			}
 		});
 		

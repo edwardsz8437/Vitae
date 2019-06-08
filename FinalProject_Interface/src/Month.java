@@ -68,10 +68,6 @@ public class Month {
 	
 	
 	
-	
-	
-	
-	
 	public String findAverageSleep()
 	{
 		double totalSleep = 0;

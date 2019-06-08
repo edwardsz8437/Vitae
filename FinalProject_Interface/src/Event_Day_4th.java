@@ -160,7 +160,7 @@ public class Event_Day_4th {
 		JButton btnSave = new JButton("Refresh");
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Event_Day_1st.refreshDayUI();
+				Event_Day_4th.refreshDayUI();
 			}
 		});
 		
