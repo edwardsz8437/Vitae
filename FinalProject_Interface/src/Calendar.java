@@ -381,8 +381,8 @@ public class Calendar extends JFrame {
 			}
 		});
 		
-		JButton btnGetAvgSleep = new JButton("Get Averages");
-		btnGetAvgSleep.addActionListener(new ActionListener() {
+		JButton btnGetAverages = new JButton("Get Averages");
+		btnGetAverages.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Day first=new Day("May", 1, 2019, 5, 3, 20);
 				Day second=new Day("May", 2, 2019, 7, 9, 50);
