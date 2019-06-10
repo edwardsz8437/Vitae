@@ -71,7 +71,7 @@ public class Event_Day_5th {
 	 */
 	private void initialize() 
 	{
-		Day first = new Day("Janurary", 1, 2000, 0, 0, 0);
+		Day first = new Day("Janurary", 5, 2000, 0, 0, 0);
 		frame = new JFrame();
 		frame.setBounds(100, 100, 504, 512);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
