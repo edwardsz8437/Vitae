@@ -153,7 +153,7 @@ public class Event_Day_23rd {
 		txtYourEvents.setColumns(10);
 		
 		txtEvents = new JTextField();
-		txtEvents.setEditable(edit);
+		txtEvents.setEditable(true);
 		txtEvents.setText("EVENTS");
 		txtEvents.setColumns(10);
 		
