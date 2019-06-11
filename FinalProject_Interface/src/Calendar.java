@@ -467,7 +467,7 @@ public class Calendar extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(1)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(btnGetAvgSleep)
+								.addComponent(btnGetAverages)
 								.addGroup(gl_contentPane.createSequentialGroup()
 									.addComponent(btnth_21)
 									.addGap(6)
@@ -520,7 +520,7 @@ public class Calendar extends JFrame {
 						.addComponent(btnth_22)
 						.addComponent(btnth_23))
 					.addPreferredGap(ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-					.addComponent(btnGetAvgSleep)
+					.addComponent(btnGetAverages)
 					.addGap(32))
 		);
 		contentPane.setLayout(gl_contentPane);
