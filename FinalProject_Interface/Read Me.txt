@@ -1,0 +1,8 @@
+Vitae
+
+You will start on the "Calendar" UI. 
+
+From this screen you have buttons you may press that correspond to the days of the month which when clicked, will open a new window that holds you data and events for that day.
+The "Calendar" UI also has a button that gets the average of our three trackers (mood, sleep, and finances) through the entirety of the month. 
+
+The new window that holds the data for each of our days has two buttons that are used to “Edit Day” and “Refresh” the window. The “Edit Day” button lets the user alter the data presented to their liking. 
